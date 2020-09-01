@@ -13,9 +13,9 @@ output = json.loads(data)
 output = output['MgisRapidCharge']
 output = output['row']
 
-# print(output[0].keys())
-# print(output[0]['COT_ADDR_FULL_OLD'])
-# print(output[1].values())
+#print(output[0].keys())
+#print(output[0]['COT_ADDR_FULL_OLD'])
+#print(output[1].values())
 
 for i in range(0, (len(output))):
     seoul_data.append(output[i]['COT_ADDR_FULL_OLD'])
@@ -28,7 +28,7 @@ for i in range(0, (len(output))):
 
 n = 5
 result = [seoul_data[i*n:(i+1)*n] for i in range((len(seoul_data) + n-1)//n)]
-print(result)
+# print(result)
 
 df = pd.DataFrame(result, columns=['location', 'x', 'y', 'info', 'tel'])
 df.to_csv('Seoul_wheelchair.csv', index=False, encoding='utf-8')
