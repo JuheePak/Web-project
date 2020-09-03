@@ -31,4 +31,4 @@ result = [seoul_data[i*n:(i+1)*n] for i in range((len(seoul_data) + n-1)//n)]
 # print(result)
 
 df = pd.DataFrame(result, columns=['location', 'x', 'y', 'info', 'tel'])
-df.to_csv('Seoul_wheelchair.csv', index=False, encoding='utf-8')
+df.to_csv('Seoul_wheelchair.csv', index=False, encoding='utf8')
